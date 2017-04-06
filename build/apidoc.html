@@ -1,0 +1,1986 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/fantasyland/fantasy-land"
+
+    >fantasy-land (v3.2.0)</a>
+</h1>
+<h4>Specification for interoperability of common algebraic structures in JavaScript</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-land">module fantasy-land</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-land.compose">
+            function <span class="apidocSignatureSpan">fantasy-land.</span>compose
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-land.id">
+            function <span class="apidocSignatureSpan">fantasy-land.</span>id
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-land.string_sum">
+            function <span class="apidocSignatureSpan">fantasy-land.</span>string_sum
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fantasy-land.</span>alternative</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fantasy-land.</span>applicative</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fantasy-land.</span>apply</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fantasy-land.</span>bifunctor</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fantasy-land.</span>chainrec</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fantasy-land.</span>comonad</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fantasy-land.</span>compose.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fantasy-land.</span>contravariant</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fantasy-land.</span>foldable</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fantasy-land.</span>func</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fantasy-land.</span>functor</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fantasy-land.</span>id.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fantasy-land.</span>monad</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fantasy-land.</span>monoid</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fantasy-land.</span>ord</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fantasy-land.</span>plus</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fantasy-land.</span>profunctor</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fantasy-land.</span>semigroup</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fantasy-land.</span>setoid</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fantasy-land.</span>string_sum.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fantasy-land.</span>traversable</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">fantasy-land.</span>alt</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">fantasy-land.</span>ap</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">fantasy-land.</span>bimap</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">fantasy-land.</span>chain</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">fantasy-land.</span>chainRec</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">fantasy-land.</span>concat</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">fantasy-land.</span>contramap</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">fantasy-land.</span>empty</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">fantasy-land.</span>equals</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">fantasy-land.</span>extend</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">fantasy-land.</span>extract</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">fantasy-land.</span>lte</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">fantasy-land.</span>map</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">fantasy-land.</span>of</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">fantasy-land.</span>promap</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">fantasy-land.</span>reduce</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">fantasy-land.</span>traverse</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">fantasy-land.</span>zero</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-land.alt">module fantasy-land.alt</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-land.alt.associativity">
+            function <span class="apidocSignatureSpan">fantasy-land.alt.</span>associativity
+            <span class="apidocSignatureSpan">( a[alt](b)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-land.alt.distributivity">
+            function <span class="apidocSignatureSpan">fantasy-land.alt.</span>distributivity
+            <span class="apidocSignatureSpan">( a[alt](b)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-land.alternative">module fantasy-land.alternative</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-land.alternative.annihilation">
+            function <span class="apidocSignatureSpan">fantasy-land.alternative.</span>annihilation
+            <span class="apidocSignatureSpan">( x[ap](T[zero]()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-land.alternative.distributivity">
+            function <span class="apidocSignatureSpan">fantasy-land.alternative.</span>distributivity
+            <span class="apidocSignatureSpan">( x[ap](f[alt](g)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-land.applicative">module fantasy-land.applicative</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-land.applicative.homomorphism">
+            function <span class="apidocSignatureSpan">fantasy-land.applicative.</span>homomorphism
+            <span class="apidocSignatureSpan">(x)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-land.applicative.identity">
+            function <span class="apidocSignatureSpan">fantasy-land.applicative.</span>identity
+            <span class="apidocSignatureSpan">(x)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-land.applicative.interchange">
+            function <span class="apidocSignatureSpan">fantasy-land.applicative.</span>interchange
+            <span class="apidocSignatureSpan">(identity)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-land.apply">module fantasy-land.apply</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-land.apply.composition">
+            function <span class="apidocSignatureSpan">fantasy-land.apply.</span>composition
+            <span class="apidocSignatureSpan">(identity)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-land.bifunctor">module fantasy-land.bifunctor</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-land.bifunctor.composition">
+            function <span class="apidocSignatureSpan">fantasy-land.bifunctor.</span>composition
+            <span class="apidocSignatureSpan">(x)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-land.bifunctor.identity">
+            function <span class="apidocSignatureSpan">fantasy-land.bifunctor.</span>identity
+            <span class="apidocSignatureSpan">(x)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-land.chain">module fantasy-land.chain</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-land.chain.associativity">
+            function <span class="apidocSignatureSpan">fantasy-land.chain.</span>associativity
+            <span class="apidocSignatureSpan">(x)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-land.chainrec">module fantasy-land.chainrec</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-land.chainrec.equivalence">
+            function <span class="apidocSignatureSpan">fantasy-land.chainrec.</span>equivalence
+            <span class="apidocSignatureSpan">((next, done, v)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-land.comonad">module fantasy-land.comonad</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-land.comonad.leftIdentity">
+            function <span class="apidocSignatureSpan">fantasy-land.comonad.</span>leftIdentity
+            <span class="apidocSignatureSpan">(x)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-land.comonad.rightIdentity">
+            function <span class="apidocSignatureSpan">fantasy-land.comonad.</span>rightIdentity
+            <span class="apidocSignatureSpan">(x)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-land.compose">module fantasy-land.compose</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-land.compose.compose">
+            function <span class="apidocSignatureSpan">fantasy-land.</span>compose
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">fantasy-land.compose.</span>_length</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-land.compose.prototype">module fantasy-land.compose.prototype</a><ol>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-land.contravariant">module fantasy-land.contravariant</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-land.contravariant.composition">
+            function <span class="apidocSignatureSpan">fantasy-land.contravariant.</span>composition
+            <span class="apidocSignatureSpan">(x)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-land.contravariant.identity">
+            function <span class="apidocSignatureSpan">fantasy-land.contravariant.</span>identity
+            <span class="apidocSignatureSpan">(x)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-land.extend">module fantasy-land.extend</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-land.extend.associativity">
+            function <span class="apidocSignatureSpan">fantasy-land.extend.</span>associativity
+            <span class="apidocSignatureSpan">(x)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-land.foldable">module fantasy-land.foldable</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-land.foldable.associativity">
+            function <span class="apidocSignatureSpan">fantasy-land.foldable.</span>associativity
+            <span class="apidocSignatureSpan">(x)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-land.func">module fantasy-land.func</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-land.func.equality">
+            function <span class="apidocSignatureSpan">fantasy-land.func.</span>equality
+            <span class="apidocSignatureSpan">(x, y)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-land.func.lte">
+            function <span class="apidocSignatureSpan">fantasy-land.func.</span>lte
+            <span class="apidocSignatureSpan">(x, y)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-land.functor">module fantasy-land.functor</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-land.functor.composition">
+            function <span class="apidocSignatureSpan">fantasy-land.functor.</span>composition
+            <span class="apidocSignatureSpan">(x)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-land.functor.identity">
+            function <span class="apidocSignatureSpan">fantasy-land.functor.</span>identity
+            <span class="apidocSignatureSpan">(x)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-land.id">module fantasy-land.id</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-land.id.id">
+            function <span class="apidocSignatureSpan">fantasy-land.</span>id
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">fantasy-land.id.</span>_length</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-land.id.prototype">module fantasy-land.id.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-land.id.prototype.toArray">
+            function <span class="apidocSignatureSpan">fantasy-land.id.prototype.</span>toArray
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-land.monad">module fantasy-land.monad</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-land.monad.leftIdentity">
+            function <span class="apidocSignatureSpan">fantasy-land.monad.</span>leftIdentity
+            <span class="apidocSignatureSpan">(x)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-land.monad.rightIdentity">
+            function <span class="apidocSignatureSpan">fantasy-land.monad.</span>rightIdentity
+            <span class="apidocSignatureSpan">(x)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-land.monoid">module fantasy-land.monoid</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-land.monoid.leftIdentity">
+            function <span class="apidocSignatureSpan">fantasy-land.monoid.</span>leftIdentity
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-land.monoid.rightIdentity">
+            function <span class="apidocSignatureSpan">fantasy-land.monoid.</span>rightIdentity
+            <span class="apidocSignatureSpan">(x)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-land.ord">module fantasy-land.ord</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-land.ord.antisymmetry">
+            function <span class="apidocSignatureSpan">fantasy-land.ord.</span>antisymmetry
+            <span class="apidocSignatureSpan">(g)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-land.ord.totality">
+            function <span class="apidocSignatureSpan">fantasy-land.ord.</span>totality
+            <span class="apidocSignatureSpan">(g)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-land.ord.transitivity">
+            function <span class="apidocSignatureSpan">fantasy-land.ord.</span>transitivity
+            <span class="apidocSignatureSpan">(g)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-land.plus">module fantasy-land.plus</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-land.plus.annihilation">
+            function <span class="apidocSignatureSpan">fantasy-land.plus.</span>annihilation
+            <span class="apidocSignatureSpan">( T[zero]()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-land.plus.leftIdentity">
+            function <span class="apidocSignatureSpan">fantasy-land.plus.</span>leftIdentity
+            <span class="apidocSignatureSpan">( x[alt](T[zero]()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-land.plus.rightIdentity">
+            function <span class="apidocSignatureSpan">fantasy-land.plus.</span>rightIdentity
+            <span class="apidocSignatureSpan">( T[zero]()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-land.profunctor">module fantasy-land.profunctor</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-land.profunctor.composition">
+            function <span class="apidocSignatureSpan">fantasy-land.profunctor.</span>composition
+            <span class="apidocSignatureSpan">(x)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-land.profunctor.identity">
+            function <span class="apidocSignatureSpan">fantasy-land.profunctor.</span>identity
+            <span class="apidocSignatureSpan">(x)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-land.semigroup">module fantasy-land.semigroup</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-land.semigroup.associativity">
+            function <span class="apidocSignatureSpan">fantasy-land.semigroup.</span>associativity
+            <span class="apidocSignatureSpan">(x)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-land.setoid">module fantasy-land.setoid</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-land.setoid.reflexivity">
+            function <span class="apidocSignatureSpan">fantasy-land.setoid.</span>reflexivity
+            <span class="apidocSignatureSpan">(x)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-land.setoid.symmetry">
+            function <span class="apidocSignatureSpan">fantasy-land.setoid.</span>symmetry
+            <span class="apidocSignatureSpan">(x)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-land.setoid.transitivity">
+            function <span class="apidocSignatureSpan">fantasy-land.setoid.</span>transitivity
+            <span class="apidocSignatureSpan">(x)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-land.string_sum">module fantasy-land.string_sum</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-land.string_sum.string_sum">
+            function <span class="apidocSignatureSpan">fantasy-land.</span>string_sum
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">fantasy-land.string_sum.</span>_length</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-land.string_sum.prototype">module fantasy-land.string_sum.prototype</a><ol>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fantasy-land.traversable">module fantasy-land.traversable</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-land.traversable.composition">
+            function <span class="apidocSignatureSpan">fantasy-land.traversable.</span>composition
+            <span class="apidocSignatureSpan">(x)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-land.traversable.identity">
+            function <span class="apidocSignatureSpan">fantasy-land.traversable.</span>identity
+            <span class="apidocSignatureSpan">(T, T[of])</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fantasy-land.traversable.naturality">
+            function <span class="apidocSignatureSpan">fantasy-land.traversable.</span>naturality
+            <span class="apidocSignatureSpan">(t(x)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-land" id="apidoc.module.fantasy-land">module fantasy-land</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-land.compose" id="apidoc.element.fantasy-land.compose">
+        function <span class="apidocSignatureSpan">fantasy-land.</span>compose
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapped() {
+    var self = getInstance(this, wrapped),
+        i;
+
+    if(arguments.length != fields.length)
+        throw new TypeError(&#x27;Expected &#x27; + fields.length + &#x27; arguments, got &#x27; + arguments.length);
+
+    for(i = 0; i &#x3c; fields.length; i++)
+        self[fields[i]] = arguments[i];
+
+    return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-land.id" id="apidoc.element.fantasy-land.id">
+        function <span class="apidocSignatureSpan">fantasy-land.</span>id
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapped() {
+    var self = getInstance(this, wrapped),
+        i;
+
+    if(arguments.length != fields.length)
+        throw new TypeError(&#x27;Expected &#x27; + fields.length + &#x27; arguments, got &#x27; + arguments.length);
+
+    for(i = 0; i &#x3c; fields.length; i++)
+        self[fields[i]] = arguments[i];
+
+    return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-land.string_sum" id="apidoc.element.fantasy-land.string_sum">
+        function <span class="apidocSignatureSpan">fantasy-land.</span>string_sum
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapped() {
+    var self = getInstance(this, wrapped),
+        i;
+
+    if(arguments.length != fields.length)
+        throw new TypeError(&#x27;Expected &#x27; + fields.length + &#x27; arguments, got &#x27; + arguments.length);
+
+    for(i = 0; i &#x3c; fields.length; i++)
+        self[fields[i]] = arguments[i];
+
+    return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-land.alt" id="apidoc.module.fantasy-land.alt">module fantasy-land.alt</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-land.alt.associativity" id="apidoc.element.fantasy-land.alt.associativity">
+        function <span class="apidocSignatureSpan">fantasy-land.alt.</span>associativity
+        <span class="apidocSignatureSpan">( a[alt](b)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">eq =&#x3e; a =&#x3e; b =&#x3e; c =&#x3e; eq( a[alt](b)[alt](c),
+  a[alt](b[alt](c))
+)</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-land.alt.distributivity" id="apidoc.element.fantasy-land.alt.distributivity">
+        function <span class="apidocSignatureSpan">fantasy-land.alt.</span>distributivity
+        <span class="apidocSignatureSpan">( a[alt](b)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">eq =&#x3e; a =&#x3e; b =&#x3e; f =&#x3e; eq( a[alt](b)[map](f),
+  a[map](f)[alt](b[map](f))
+)</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-land.alternative" id="apidoc.module.fantasy-land.alternative">module fantasy-land.alternative</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-land.alternative.annihilation" id="apidoc.element.fantasy-land.alternative.annihilation">
+        function <span class="apidocSignatureSpan">fantasy-land.alternative.</span>annihilation
+        <span class="apidocSignatureSpan">( x[ap](T[zero]()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">T =&#x3e; eq =&#x3e; x =&#x3e; eq( x[ap](T[zero]()),
+  T[zero]()
+)</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-land.alternative.distributivity" id="apidoc.element.fantasy-land.alternative.distributivity">
+        function <span class="apidocSignatureSpan">fantasy-land.alternative.</span>distributivity
+        <span class="apidocSignatureSpan">( x[ap](f[alt](g)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">eq =&#x3e; x =&#x3e; f =&#x3e; g =&#x3e; eq( x[ap](f[alt](g)),
+  x[ap](f)[alt](x[ap](g))
+)</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-land.applicative" id="apidoc.module.fantasy-land.applicative">module fantasy-land.applicative</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-land.applicative.homomorphism" id="apidoc.element.fantasy-land.applicative.homomorphism">
+        function <span class="apidocSignatureSpan">fantasy-land.applicative.</span>homomorphism
+        <span class="apidocSignatureSpan">(x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">T =&#x3e; eq =&#x3e; x =&#x3e; {
+  const a = T[of](x)[ap](T[of](identity));
+  const b = T[of](identity(x));
+  return eq(a, b);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-land.applicative.identity" id="apidoc.element.fantasy-land.applicative.identity">
+        function <span class="apidocSignatureSpan">fantasy-land.applicative.</span>identity
+        <span class="apidocSignatureSpan">(x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">T =&#x3e; eq =&#x3e; x =&#x3e; {
+  const a = T[of](x)[ap](T[of](identity));
+  const b = T[of](x);
+  return eq(a, b);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-land.applicative.interchange" id="apidoc.element.fantasy-land.applicative.interchange">
+        function <span class="apidocSignatureSpan">fantasy-land.applicative.</span>interchange
+        <span class="apidocSignatureSpan">(identity)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">T =&#x3e; eq =&#x3e; x =&#x3e; {
+  const u = T[of](identity);
+
+  const a = T[of](x)[ap](u);
+  const b = u[ap](T[of](thrush(x)));
+  return eq(a, b);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-land.apply" id="apidoc.module.fantasy-land.apply">module fantasy-land.apply</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-land.apply.composition" id="apidoc.element.fantasy-land.apply.composition">
+        function <span class="apidocSignatureSpan">fantasy-land.apply.</span>composition
+        <span class="apidocSignatureSpan">(identity)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">t =&#x3e; eq =&#x3e; x =&#x3e; {
+  const y = t[of](identity);
+
+  const a = y[ap](y[ap](y[map](compose)));
+  const b = y[ap](y)[ap](y);
+  return eq(a, b);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-land.bifunctor" id="apidoc.module.fantasy-land.bifunctor">module fantasy-land.bifunctor</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-land.bifunctor.composition" id="apidoc.element.fantasy-land.bifunctor.composition">
+        function <span class="apidocSignatureSpan">fantasy-land.bifunctor.</span>composition
+        <span class="apidocSignatureSpan">(x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">t =&#x3e; eq =&#x3e; x =&#x3e; {
+  const a = t(x)[bimap](compose(identity)(identity), compose(identity)(identity));
+  const b = t(x)[bimap](identity, identity)[bimap](identity, identity);
+  return eq(a, b);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-land.bifunctor.identity" id="apidoc.element.fantasy-land.bifunctor.identity">
+        function <span class="apidocSignatureSpan">fantasy-land.bifunctor.</span>identity
+        <span class="apidocSignatureSpan">(x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">t =&#x3e; eq =&#x3e; x =&#x3e; {
+  const a = t(x)[bimap](identity, identity);
+  const b = t(x);
+  return eq(a, b);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-land.chain" id="apidoc.module.fantasy-land.chain">module fantasy-land.chain</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-land.chain.associativity" id="apidoc.element.fantasy-land.chain.associativity">
+        function <span class="apidocSignatureSpan">fantasy-land.chain.</span>associativity
+        <span class="apidocSignatureSpan">(x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">t =&#x3e; eq =&#x3e; x =&#x3e; {
+  const a = t[of](x)[chain](t[of])[chain](t[of]);
+  const b = t[of](x)[chain](x =&#x3e; t[of](x)[chain](t[of]));
+  return eq(a, b);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-land.chainrec" id="apidoc.module.fantasy-land.chainrec">module fantasy-land.chainrec</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-land.chainrec.equivalence" id="apidoc.element.fantasy-land.chainrec.equivalence">
+        function <span class="apidocSignatureSpan">fantasy-land.chainrec.</span>equivalence
+        <span class="apidocSignatureSpan">((next, done, v)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">T =&#x3e; eq =&#x3e; p =&#x3e; d =&#x3e; n =&#x3e; x =&#x3e; {
+  const a = T[chainRec]((next, done, v) =&#x3e; p(v) ? d(v)[map](done) : n(v)[map](next), x);
+  const b = (function step(v) { return p(v) ? d(v) : n(v)[chain](step); }(x));
+  return eq(a, b);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-land.comonad" id="apidoc.module.fantasy-land.comonad">module fantasy-land.comonad</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-land.comonad.leftIdentity" id="apidoc.element.fantasy-land.comonad.leftIdentity">
+        function <span class="apidocSignatureSpan">fantasy-land.comonad.</span>leftIdentity
+        <span class="apidocSignatureSpan">(x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">t =&#x3e; eq =&#x3e; x =&#x3e; {
+  const a = t(x)[extend](identity)[extract]();
+  const b = t(x);
+  return eq(a, b);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-land.comonad.rightIdentity" id="apidoc.element.fantasy-land.comonad.rightIdentity">
+        function <span class="apidocSignatureSpan">fantasy-land.comonad.</span>rightIdentity
+        <span class="apidocSignatureSpan">(x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">t =&#x3e; eq =&#x3e; x =&#x3e; {
+  const a = t(x)[extend](w =&#x3e; w[extract]());
+  const b = t(x);
+  return eq(a, b);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-land.compose" id="apidoc.module.fantasy-land.compose">module fantasy-land.compose</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-land.compose.compose" id="apidoc.element.fantasy-land.compose.compose">
+        function <span class="apidocSignatureSpan">fantasy-land.</span>compose
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapped() {
+    var self = getInstance(this, wrapped),
+        i;
+
+    if(arguments.length != fields.length)
+        throw new TypeError(&#x27;Expected &#x27; + fields.length + &#x27; arguments, got &#x27; + arguments.length);
+
+    for(i = 0; i &#x3c; fields.length; i++)
+        self[fields[i]] = arguments[i];
+
+    return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-land.compose.prototype" id="apidoc.module.fantasy-land.compose.prototype">module fantasy-land.compose.prototype</a></h1>
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-land.contravariant" id="apidoc.module.fantasy-land.contravariant">module fantasy-land.contravariant</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-land.contravariant.composition" id="apidoc.element.fantasy-land.contravariant.composition">
+        function <span class="apidocSignatureSpan">fantasy-land.contravariant.</span>composition
+        <span class="apidocSignatureSpan">(x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">t =&#x3e; eq =&#x3e; x =&#x3e; {
+  const a = t(x)[contramap](compose(identity)(identity));
+  const b = t(x)[contramap](identity)[contramap](identity);
+  return eq(a, b);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-land.contravariant.identity" id="apidoc.element.fantasy-land.contravariant.identity">
+        function <span class="apidocSignatureSpan">fantasy-land.contravariant.</span>identity
+        <span class="apidocSignatureSpan">(x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">t =&#x3e; eq =&#x3e; x =&#x3e; {
+  const a = t(x)[contramap](identity);
+  const b = t(x);
+  return eq(a, b);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-land.extend" id="apidoc.module.fantasy-land.extend">module fantasy-land.extend</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-land.extend.associativity" id="apidoc.element.fantasy-land.extend.associativity">
+        function <span class="apidocSignatureSpan">fantasy-land.extend.</span>associativity
+        <span class="apidocSignatureSpan">(x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">t =&#x3e; eq =&#x3e; x =&#x3e; {
+  const a = t(x)[extend](identity)[extend](identity);
+  const b = t(x)[extend](w =&#x3e; identity(w[extend](identity)));
+  return eq(a, b);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-land.foldable" id="apidoc.module.fantasy-land.foldable">module fantasy-land.foldable</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-land.foldable.associativity" id="apidoc.element.fantasy-land.foldable.associativity">
+        function <span class="apidocSignatureSpan">fantasy-land.foldable.</span>associativity
+        <span class="apidocSignatureSpan">(x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">t =&#x3e; eq =&#x3e; x =&#x3e; {
+  const a = t(x)[reduce](identity, x);
+  const b = t(x).toArray()[reduce](identity, x);
+  return eq(a, b);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-land.func" id="apidoc.module.fantasy-land.func">module fantasy-land.func</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-land.func.equality" id="apidoc.element.fantasy-land.func.equality">
+        function <span class="apidocSignatureSpan">fantasy-land.func.</span>equality
+        <span class="apidocSignatureSpan">(x, y)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(x, y) =&#x3e; typeof x[fl.equals] === &#x27;function&#x27; ? x[fl.equals](y) : x === y</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-land.func.lte" id="apidoc.element.fantasy-land.func.lte">
+        function <span class="apidocSignatureSpan">fantasy-land.func.</span>lte
+        <span class="apidocSignatureSpan">(x, y)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(x, y) =&#x3e; {
+  if (typeof y[fl.lte] === &#x27;function&#x27;) return y[fl.lte](x);
+
+  const typeX = typeof x;
+  const typeY = typeof y;
+  return typeX === typeY &#x26;&#x26; (typeX === &#x27;string&#x27; || typeX === &#x27;number&#x27;) &#x26;&#x26; x &#x3c;= y;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+2. `equals` must return a boolean (`true` or `false`).
+
+### Ord
+
+A value that implements the Ord specification must also implement
+the [Setoid](#setoid) specification.
+
+1. `a.<span class="apidocCodeKeywordSpan">lte</span>(b)` or `b.lte(a)` (totality)
+2. If `a.lte(b)` and `b.lte(a)`, then `a.equals(b)` (antisymmetry)
+3. If `a.lte(b)` and `b.lte(c)`, then `a.lte(c)` (transitivity)
+
+#### `lte` method
+
+```hs
+lte :: Ord a =&#x3e; a ~&#x3e; a -&#x3e; Boolean
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-land.functor" id="apidoc.module.fantasy-land.functor">module fantasy-land.functor</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-land.functor.composition" id="apidoc.element.fantasy-land.functor.composition">
+        function <span class="apidocSignatureSpan">fantasy-land.functor.</span>composition
+        <span class="apidocSignatureSpan">(x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">of =&#x3e; eq =&#x3e; f =&#x3e; g =&#x3e; x =&#x3e; {
+  const a = of(x)[map](x =&#x3e; f(g(x)));
+  const b = of(x)[map](g)[map](f);
+  return eq(a, b);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-land.functor.identity" id="apidoc.element.fantasy-land.functor.identity">
+        function <span class="apidocSignatureSpan">fantasy-land.functor.</span>identity
+        <span class="apidocSignatureSpan">(x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">of =&#x3e; eq =&#x3e; x =&#x3e; {
+  const a = of(x)[map](x =&#x3e; x);
+  const b = of(x);
+  return eq(a, b);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-land.id" id="apidoc.module.fantasy-land.id">module fantasy-land.id</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-land.id.id" id="apidoc.element.fantasy-land.id.id">
+        function <span class="apidocSignatureSpan">fantasy-land.</span>id
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapped() {
+    var self = getInstance(this, wrapped),
+        i;
+
+    if(arguments.length != fields.length)
+        throw new TypeError(&#x27;Expected &#x27; + fields.length + &#x27; arguments, got &#x27; + arguments.length);
+
+    for(i = 0; i &#x3c; fields.length; i++)
+        self[fields[i]] = arguments[i];
+
+    return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-land.id.prototype" id="apidoc.module.fantasy-land.id.prototype">module fantasy-land.id.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-land.id.prototype.toArray" id="apidoc.element.fantasy-land.id.prototype.toArray">
+        function <span class="apidocSignatureSpan">fantasy-land.id.prototype.</span>toArray
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toArray = function () {
+  return [this.value];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+const {identity} = require(&#x27;fantasy-combinators&#x27;);
+const {reduce} = require(&#x27;..&#x27;);
+
+/**
+
+### Foldable
+
+1. `u.reduce` is equivalent to `u.<span class="apidocCodeKeywordSpan">toArray</span>().reduce`
+
+**/
+
+const associativity = t =&#x3e; eq =&#x3e; x =&#x3e; {
+const a = t(x)[reduce](identity, x);
+const b = t(x).toArray()[reduce](identity, x);
+return eq(a, b);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-land.monad" id="apidoc.module.fantasy-land.monad">module fantasy-land.monad</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-land.monad.leftIdentity" id="apidoc.element.fantasy-land.monad.leftIdentity">
+        function <span class="apidocSignatureSpan">fantasy-land.monad.</span>leftIdentity
+        <span class="apidocSignatureSpan">(x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">t =&#x3e; eq =&#x3e; f =&#x3e; x =&#x3e; {
+  const a = t[of](x)[chain](f);
+  const b = f(x);
+  return eq(a, b);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-land.monad.rightIdentity" id="apidoc.element.fantasy-land.monad.rightIdentity">
+        function <span class="apidocSignatureSpan">fantasy-land.monad.</span>rightIdentity
+        <span class="apidocSignatureSpan">(x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">t =&#x3e; eq =&#x3e; x =&#x3e; {
+  const a = t[of](x)[chain](t[of]);
+  const b = t[of](x);
+  return eq(a, b);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-land.monoid" id="apidoc.module.fantasy-land.monoid">module fantasy-land.monoid</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-land.monoid.leftIdentity" id="apidoc.element.fantasy-land.monoid.leftIdentity">
+        function <span class="apidocSignatureSpan">fantasy-land.monoid.</span>leftIdentity
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">T =&#x3e; eq =&#x3e; x =&#x3e; {
+  const a = T[empty]()[concat](T[of](x));
+  const b = T[of](x);
+  return eq(a, b);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-land.monoid.rightIdentity" id="apidoc.element.fantasy-land.monoid.rightIdentity">
+        function <span class="apidocSignatureSpan">fantasy-land.monoid.</span>rightIdentity
+        <span class="apidocSignatureSpan">(x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">T =&#x3e; eq =&#x3e; x =&#x3e; {
+  const a = T[of](x)[concat](T[empty]());
+  const b = T[of](x);
+  return eq(a, b);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-land.ord" id="apidoc.module.fantasy-land.ord">module fantasy-land.ord</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-land.ord.antisymmetry" id="apidoc.element.fantasy-land.ord.antisymmetry">
+        function <span class="apidocSignatureSpan">fantasy-land.ord.</span>antisymmetry
+        <span class="apidocSignatureSpan">(g)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">eq =&#x3e; f =&#x3e; g =&#x3e; {
+  const a = f[lte](g);
+  const b = g[lte](f);
+  const c = f[equals](g);
+  const d = true;
+  return eq(a, d) &#x26;&#x26; eq(b, d) &#x26;&#x26; eq(c, d);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-land.ord.totality" id="apidoc.element.fantasy-land.ord.totality">
+        function <span class="apidocSignatureSpan">fantasy-land.ord.</span>totality
+        <span class="apidocSignatureSpan">(g)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">eq =&#x3e; f =&#x3e; g =&#x3e; {
+  const a = f[lte](g);
+  const b = g[lte](f);
+  const c = true;
+  return eq(a || b, c);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-land.ord.transitivity" id="apidoc.element.fantasy-land.ord.transitivity">
+        function <span class="apidocSignatureSpan">fantasy-land.ord.</span>transitivity
+        <span class="apidocSignatureSpan">(g)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">eq =&#x3e; f =&#x3e; g =&#x3e; h =&#x3e; {
+  const a = f[lte](g);
+  const b = g[lte](h);
+  const c = f[lte](h);
+  const d = true;
+  return eq(a, d) &#x26;&#x26; eq(b, d) &#x26;&#x26; eq(c, d);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-land.plus" id="apidoc.module.fantasy-land.plus">module fantasy-land.plus</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-land.plus.annihilation" id="apidoc.element.fantasy-land.plus.annihilation">
+        function <span class="apidocSignatureSpan">fantasy-land.plus.</span>annihilation
+        <span class="apidocSignatureSpan">( T[zero]()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">T =&#x3e; eq =&#x3e; f =&#x3e; eq( T[zero]()[map](f),
+  T[zero]()
+)</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-land.plus.leftIdentity" id="apidoc.element.fantasy-land.plus.leftIdentity">
+        function <span class="apidocSignatureSpan">fantasy-land.plus.</span>leftIdentity
+        <span class="apidocSignatureSpan">( x[alt](T[zero]()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">T =&#x3e; eq =&#x3e; x =&#x3e; eq( x[alt](T[zero]()),
+  x
+)</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-land.plus.rightIdentity" id="apidoc.element.fantasy-land.plus.rightIdentity">
+        function <span class="apidocSignatureSpan">fantasy-land.plus.</span>rightIdentity
+        <span class="apidocSignatureSpan">( T[zero]()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">T =&#x3e; eq =&#x3e; x =&#x3e; eq( T[zero]()[alt](x),
+  x
+)</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-land.profunctor" id="apidoc.module.fantasy-land.profunctor">module fantasy-land.profunctor</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-land.profunctor.composition" id="apidoc.element.fantasy-land.profunctor.composition">
+        function <span class="apidocSignatureSpan">fantasy-land.profunctor.</span>composition
+        <span class="apidocSignatureSpan">(x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">t =&#x3e; eq =&#x3e; x =&#x3e; {
+  const a = t(x)[promap](compose(identity)(identity), compose(identity)(identity));
+  const b = t(x)[promap](identity, identity)[promap](identity, identity);
+  return eq(a, b);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-land.profunctor.identity" id="apidoc.element.fantasy-land.profunctor.identity">
+        function <span class="apidocSignatureSpan">fantasy-land.profunctor.</span>identity
+        <span class="apidocSignatureSpan">(x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">t =&#x3e; eq =&#x3e; x =&#x3e; {
+  const a = t(x)[promap](identity, identity);
+  const b = t(x);
+  return eq(a, b);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-land.semigroup" id="apidoc.module.fantasy-land.semigroup">module fantasy-land.semigroup</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-land.semigroup.associativity" id="apidoc.element.fantasy-land.semigroup.associativity">
+        function <span class="apidocSignatureSpan">fantasy-land.semigroup.</span>associativity
+        <span class="apidocSignatureSpan">(x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">t =&#x3e; eq =&#x3e; x =&#x3e; {
+  const f = t(x);
+  const g = t(x);
+  const h = t(x);
+
+  const a = f[concat](g)[concat](h);
+  const b = f[concat](g[concat](h));
+  return eq(a, b);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-land.setoid" id="apidoc.module.fantasy-land.setoid">module fantasy-land.setoid</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-land.setoid.reflexivity" id="apidoc.element.fantasy-land.setoid.reflexivity">
+        function <span class="apidocSignatureSpan">fantasy-land.setoid.</span>reflexivity
+        <span class="apidocSignatureSpan">(x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">t =&#x3e; eq =&#x3e; x =&#x3e; {
+  const y = t(x);
+
+  const a = y[equals](y);
+  const b = true;
+  return eq(a, b);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-land.setoid.symmetry" id="apidoc.element.fantasy-land.setoid.symmetry">
+        function <span class="apidocSignatureSpan">fantasy-land.setoid.</span>symmetry
+        <span class="apidocSignatureSpan">(x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">t =&#x3e; eq =&#x3e; x =&#x3e; {
+  const f = t(x);
+  const g = t(x);
+
+  const a = f[equals](g);
+  const b = g[equals](f);
+  return eq(a, b);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-land.setoid.transitivity" id="apidoc.element.fantasy-land.setoid.transitivity">
+        function <span class="apidocSignatureSpan">fantasy-land.setoid.</span>transitivity
+        <span class="apidocSignatureSpan">(x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">t =&#x3e; eq =&#x3e; x =&#x3e; {
+  const f = t(x);
+  const g = t(x);
+  const h = t(x);
+
+  const a = f[equals](g);
+  const b = g[equals](h);
+  const c = f[equals](h);
+  return eq(a &#x26;&#x26; b, c);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-land.string_sum" id="apidoc.module.fantasy-land.string_sum">module fantasy-land.string_sum</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-land.string_sum.string_sum" id="apidoc.element.fantasy-land.string_sum.string_sum">
+        function <span class="apidocSignatureSpan">fantasy-land.</span>string_sum
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapped() {
+    var self = getInstance(this, wrapped),
+        i;
+
+    if(arguments.length != fields.length)
+        throw new TypeError(&#x27;Expected &#x27; + fields.length + &#x27; arguments, got &#x27; + arguments.length);
+
+    for(i = 0; i &#x3c; fields.length; i++)
+        self[fields[i]] = arguments[i];
+
+    return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-land.string_sum.prototype" id="apidoc.module.fantasy-land.string_sum.prototype">module fantasy-land.string_sum.prototype</a></h1>
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fantasy-land.traversable" id="apidoc.module.fantasy-land.traversable">module fantasy-land.traversable</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-land.traversable.composition" id="apidoc.element.fantasy-land.traversable.composition">
+        function <span class="apidocSignatureSpan">fantasy-land.traversable.</span>composition
+        <span class="apidocSignatureSpan">(x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">T =&#x3e; t =&#x3e; eq =&#x3e; x =&#x3e; {
+  const a = t(x)[traverse](Compose, Compose);
+  const b = Compose(t(x)[traverse](Id, y =&#x3e; y)[map](x =&#x3e; x[traverse](Id, y =&#x3e; y)));
+  return eq(a, b);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-land.traversable.identity" id="apidoc.element.fantasy-land.traversable.identity">
+        function <span class="apidocSignatureSpan">fantasy-land.traversable.</span>identity
+        <span class="apidocSignatureSpan">(T, T[of])</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">T =&#x3e; eq =&#x3e; x =&#x3e; {
+  const u = [x];
+
+  const a = u[traverse](T, T[of]);
+  const b = T[of](u);
+  return eq(a, b);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fantasy-land.traversable.naturality" id="apidoc.element.fantasy-land.traversable.naturality">
+        function <span class="apidocSignatureSpan">fantasy-land.traversable.</span>naturality
+        <span class="apidocSignatureSpan">(t(x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">T =&#x3e; t =&#x3e; eq =&#x3e; x =&#x3e; {
+  const a = identity(t(x)[traverse](T, y =&#x3e; y));
+  const b = t(x)[traverse](T, identity);
+  return eq(a, b);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
