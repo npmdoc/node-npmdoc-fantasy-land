@@ -1,36 +1,36 @@
 <svg height="526" width="720" xmlns="http://www.w3.org/2000/svg">
 <rect height="526" fill="#555" width="720"></rect>
 <text fill="#7f7" font-family="Courier New" font-size="12" xml:space="preserve">
-<tspan x="10" y="26">  0.  2017-04-18 16:47:10 +0000    42052 bytes  .</tspan>
-<tspan x="10" y="42">  1.  2017-04-18 16:47:10 +0000     1079 bytes  LICENSE</tspan>
-<tspan x="10" y="58">  2.  2017-04-18 16:47:10 +0000    20678 bytes  README.md</tspan>
-<tspan x="10" y="74">  3.  2017-04-18 16:47:10 +0000      921 bytes  index.js</tspan>
-<tspan x="10" y="90">  4.  2017-04-18 16:47:10 +0000      479 bytes  internal/compose.js</tspan>
-<tspan x="10" y="106">  5.  2017-04-18 16:47:10 +0000      397 bytes  internal/func.js</tspan>
-<tspan x="10" y="122">  6.  2017-04-18 16:47:10 +0000     1663 bytes  internal/id.js</tspan>
-<tspan x="10" y="138">  7.  2017-04-18 16:47:10 +0000      258 bytes  internal/index.js</tspan>
-<tspan x="10" y="154">  8.  2017-04-18 16:47:10 +0000      954 bytes  internal/patch.js</tspan>
-<tspan x="10" y="170">  9.  2017-04-18 16:47:10 +0000      468 bytes  internal/string_sum.js</tspan>
-<tspan x="10" y="186"> 10.  2017-04-18 16:47:10 +0000      465 bytes  laws/alt.js</tspan>
-<tspan x="10" y="202"> 11.  2017-04-18 16:47:10 +0000      447 bytes  laws/alternative.js</tspan>
-<tspan x="10" y="218"> 12.  2017-04-18 16:47:10 +0000      822 bytes  laws/applicative.js</tspan>
-<tspan x="10" y="234"> 13.  2017-04-18 16:47:10 +0000      424 bytes  laws/apply.js</tspan>
-<tspan x="10" y="250"> 14.  2017-04-18 16:47:10 +0000      694 bytes  laws/bifunctor.js</tspan>
-<tspan x="10" y="266"> 15.  2017-04-18 16:47:10 +0000      366 bytes  laws/chain.js</tspan>
-<tspan x="10" y="282"> 16.  2017-04-18 16:47:10 +0000      547 bytes  laws/chainrec.js</tspan>
-<tspan x="10" y="298"> 17.  2017-04-18 16:47:10 +0000      539 bytes  laws/comonad.js</tspan>
-<tspan x="10" y="314"> 18.  2017-04-18 16:47:10 +0000      646 bytes  laws/contravariant.js</tspan>
-<tspan x="10" y="330"> 19.  2017-04-18 16:47:10 +0000      413 bytes  laws/extend.js</tspan>
-<tspan x="10" y="346"> 20.  2017-04-18 16:47:10 +0000      361 bytes  laws/foldable.js</tspan>
-<tspan x="10" y="362"> 21.  2017-04-18 16:47:10 +0000      491 bytes  laws/functor.js</tspan>
-<tspan x="10" y="378"> 22.  2017-04-18 16:47:10 +0000      478 bytes  laws/monad.js</tspan>
-<tspan x="10" y="394"> 23.  2017-04-18 16:47:10 +0000      508 bytes  laws/monoid.js</tspan>
-<tspan x="10" y="410"> 24.  2017-04-18 16:47:10 +0000      792 bytes  laws/ord.js</tspan>
-<tspan x="10" y="426"> 25.  2017-04-18 16:47:10 +0000      538 bytes  laws/plus.js</tspan>
-<tspan x="10" y="442"> 26.  2017-04-18 16:47:10 +0000      706 bytes  laws/profunctor.js</tspan>
-<tspan x="10" y="458"> 27.  2017-04-18 16:47:10 +0000      384 bytes  laws/semigroup.js</tspan>
-<tspan x="10" y="474"> 28.  2017-04-18 16:47:10 +0000      755 bytes  laws/setoid.js</tspan>
-<tspan x="10" y="490"> 29.  2017-04-18 16:47:10 +0000     1190 bytes  laws/traversable.js</tspan>
-<tspan x="10" y="506"> 30.  2017-04-18 16:47:10 +0000     3589 bytes  package.json</tspan>
+<tspan x="10" y="26">  0.  2017-04-18 16:48:08 +0000    42052 bytes  .</tspan>
+<tspan x="10" y="42">  1.  2017-04-18 16:48:08 +0000     1079 bytes  LICENSE</tspan>
+<tspan x="10" y="58">  2.  2017-04-18 16:48:08 +0000    20678 bytes  README.md</tspan>
+<tspan x="10" y="74">  3.  2017-04-18 16:48:08 +0000      921 bytes  index.js</tspan>
+<tspan x="10" y="90">  4.  2017-04-18 16:48:08 +0000      479 bytes  internal/compose.js</tspan>
+<tspan x="10" y="106">  5.  2017-04-18 16:48:08 +0000      397 bytes  internal/func.js</tspan>
+<tspan x="10" y="122">  6.  2017-04-18 16:48:08 +0000     1663 bytes  internal/id.js</tspan>
+<tspan x="10" y="138">  7.  2017-04-18 16:48:08 +0000      258 bytes  internal/index.js</tspan>
+<tspan x="10" y="154">  8.  2017-04-18 16:48:08 +0000      954 bytes  internal/patch.js</tspan>
+<tspan x="10" y="170">  9.  2017-04-18 16:48:08 +0000      468 bytes  internal/string_sum.js</tspan>
+<tspan x="10" y="186"> 10.  2017-04-18 16:48:08 +0000      465 bytes  laws/alt.js</tspan>
+<tspan x="10" y="202"> 11.  2017-04-18 16:48:08 +0000      447 bytes  laws/alternative.js</tspan>
+<tspan x="10" y="218"> 12.  2017-04-18 16:48:08 +0000      822 bytes  laws/applicative.js</tspan>
+<tspan x="10" y="234"> 13.  2017-04-18 16:48:08 +0000      424 bytes  laws/apply.js</tspan>
+<tspan x="10" y="250"> 14.  2017-04-18 16:48:08 +0000      694 bytes  laws/bifunctor.js</tspan>
+<tspan x="10" y="266"> 15.  2017-04-18 16:48:08 +0000      366 bytes  laws/chain.js</tspan>
+<tspan x="10" y="282"> 16.  2017-04-18 16:48:08 +0000      547 bytes  laws/chainrec.js</tspan>
+<tspan x="10" y="298"> 17.  2017-04-18 16:48:08 +0000      539 bytes  laws/comonad.js</tspan>
+<tspan x="10" y="314"> 18.  2017-04-18 16:48:08 +0000      646 bytes  laws/contravariant.js</tspan>
+<tspan x="10" y="330"> 19.  2017-04-18 16:48:08 +0000      413 bytes  laws/extend.js</tspan>
+<tspan x="10" y="346"> 20.  2017-04-18 16:48:08 +0000      361 bytes  laws/foldable.js</tspan>
+<tspan x="10" y="362"> 21.  2017-04-18 16:48:08 +0000      491 bytes  laws/functor.js</tspan>
+<tspan x="10" y="378"> 22.  2017-04-18 16:48:08 +0000      478 bytes  laws/monad.js</tspan>
+<tspan x="10" y="394"> 23.  2017-04-18 16:48:08 +0000      508 bytes  laws/monoid.js</tspan>
+<tspan x="10" y="410"> 24.  2017-04-18 16:48:08 +0000      792 bytes  laws/ord.js</tspan>
+<tspan x="10" y="426"> 25.  2017-04-18 16:48:08 +0000      538 bytes  laws/plus.js</tspan>
+<tspan x="10" y="442"> 26.  2017-04-18 16:48:08 +0000      706 bytes  laws/profunctor.js</tspan>
+<tspan x="10" y="458"> 27.  2017-04-18 16:48:08 +0000      384 bytes  laws/semigroup.js</tspan>
+<tspan x="10" y="474"> 28.  2017-04-18 16:48:08 +0000      755 bytes  laws/setoid.js</tspan>
+<tspan x="10" y="490"> 29.  2017-04-18 16:48:08 +0000     1190 bytes  laws/traversable.js</tspan>
+<tspan x="10" y="506"> 30.  2017-04-18 16:48:08 +0000     3589 bytes  package.json</tspan>
 </text>
 </svg>
