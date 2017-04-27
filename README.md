@@ -1,6 +1,6 @@
 # npmdoc-fantasy-land
 
-#### api documentation for  [fantasy-land (v3.2.0)](https://github.com/fantasyland/fantasy-land)  [![npm package](https://img.shields.io/npm/v/npmdoc-fantasy-land.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-fantasy-land) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-fantasy-land.svg)](https://travis-ci.org/npmdoc/node-npmdoc-fantasy-land)
+#### basic api documentation for  [fantasy-land (v3.2.0)](https://github.com/fantasyland/fantasy-land)  [![npm package](https://img.shields.io/npm/v/npmdoc-fantasy-land.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-fantasy-land) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-fantasy-land.svg)](https://travis-ci.org/npmdoc/node-npmdoc-fantasy-land)
 
 #### Specification for interoperability of common algebraic structures in JavaScript
 
@@ -99,7 +99,8 @@
         "test": "npm run-script lint && npm run-script unit",
         "unit": "nodeunit test.js"
     },
-    "version": "3.2.0"
+    "version": "3.2.0",
+    "bin": {}
 }
 ```
 
